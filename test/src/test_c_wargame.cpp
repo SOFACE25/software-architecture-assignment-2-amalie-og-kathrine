@@ -53,5 +53,5 @@ TEST_CASE("Combat Medic")
     }
 
     unit_heal_target((Unit *)&CaringCarlson, &SkinnyJoe);
-    REQUIRE(unit_get_health(&SkinnyJoe) == 0); // he is dead
+    REQUIRE(unit_get_health(&SkinnyJoe) == 0); // he is dead and can't be healed
 }
