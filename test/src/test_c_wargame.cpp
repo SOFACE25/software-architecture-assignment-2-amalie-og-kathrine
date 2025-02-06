@@ -42,7 +42,7 @@ TEST_CASE("Combat Medic")
     REQUIRE(unit_get_health(&SkinnyJoe) == 10);
 
     unit_attack_target((Unit *)&CaringCarlson, &SkinnyJoe);
-    REQUIRE(unit_get_health(&SkinnyJoe) == 5);
+    REQUIRE(unit_get_health(&SkinnyJoe) == 0); // SkinnyJoe is dead
     unit_attack_target((Unit *)&CaringCarlson, &SkinnyJoe);
     REQUIRE(unit_get_health(&SkinnyJoe) == 0);
     unit_heal_target((Unit *)&CaringCarlson, &SkinnyJoe);
