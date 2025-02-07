@@ -2,11 +2,12 @@
 
 void combat_medic_heal(Unit *self, Unit *target)
 {
-    if (unit_get_health(target) <= 0) // target is dead, so we can't heal them
+    if (unit_get_health(target) <= 0) // if the target is dead
     {
+        // target is dead, so we can't heal them
         printf("He is gone...");
     }
-    else
+    else // if the target is alive
     {
         printf("Hang in there!");
         unit_set_health(target, unit_get_health(target) + 10);
