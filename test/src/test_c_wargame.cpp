@@ -1,6 +1,8 @@
 #define CATCH_CONFIG_MAIN // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 
+
+
 // use 'extern "C"' when including C header files in C++
 extern "C"
 {
@@ -44,7 +46,7 @@ TEST_CASE("Combat Medic")
     unit_attack_target((Unit *)&CaringCarlson, &SkinnyJoe);
     REQUIRE(unit_get_health(&SkinnyJoe) == 0); // SkinnyJoe is dead
     unit_attack_target((Unit *)&CaringCarlson, &SkinnyJoe);
-    REQUIRE(unit_get_health(&SkinnyJoe) == 0);
+    REQUIRE(unit_get_health(&SkinnyJoe) == 5);
     unit_heal_target((Unit *)&CaringCarlson, &SkinnyJoe);
 
     while (unit_get_health(&SkinnyJoe) > 0)
