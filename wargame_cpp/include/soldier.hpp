@@ -8,6 +8,7 @@ public:
     Soldier(int health, int damage);
     virtual void attack(Unit &target);
     virtual void heal(Unit &target);
+    virtual const int getDamage(); // const member function
     virtual ~Soldier(){};
 
 private:
